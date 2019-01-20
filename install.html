@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BayHelper</title>
+    <link rel="icon" href="assets/icon_page.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="bulma.js"></script>
+  </head>
+  <body class="has-navbar-fixed-top">
+    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="https://sarturodev.github.io">
+                <img src="assets/bayhelper_logo.png" width="112" height="28"> 
+                </a>
+                <!-- Version -->
+                <div class="navbar-item" style="padding-left:0.5rem">V 1.0</div> 
+                <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                </a>
+            </div>
+            
+            <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-start">
+                <a href="install.html" class="navbar-item">
+                    Instalación
+                </a>
+            
+                <a href="#support" class="navbar-item">
+                    Apoyame
+                </a>
+
+                <a href="#contact" class="navbar-item">
+                     Contáctame
+                </a>
+        
+                </div>
+        
+            </div>
+     </nav>
+     <section class="hero is-medium is-warning is-bold">
+            <div class="hero-body">
+              <div class="container has-text-centered">
+                <a class="button is-light" href="release/bayHelper.crx" download> <h3 class="title is-4">Descargar<span class="subtitle is-6">(Para Chrome y Brave)</span></h3></a>
+                <a class="button is-light" href="release/bayHelper.nex" download> <h3 class="title is-4" style="color:rgb(180, 27, 58)">Descargar<span class="subtitle is-6">(Solo para Opera)</span></h3></a>
+                <h2 class="subtitle" style="padding-top:1rem">
+                  Ver los pasos de instalación para <a href="#chrome" style="color:rgb(77, 77, 218); font-weight: bold">Chrome</a>, <a href="#opera" style="color:rgb(77, 77, 218); font-weight: bold">Opera</a> y <a href="#brave" style="color:rgb(77, 77, 218); font-weight: bold">Brave</a> 
+                </h2>
+              </div>
+            </div>
+          </section>
+
+    <!-- Instalación Chrome -->
+    <section  id="chrome"  class="hero is-info">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+            <span> <img src="assets/browsers/chrome.png" style="height:3rem;width:3rem;" alt=""></span>
+            <h1 class="title">
+                Chrome
+            </h1>
+            </div>
+            <div class="container">
+                <ul>
+                    <li class="subtitle is-5" >
+                        <p style="font-weight: bold">1-Descargar el archivo <a href="release/bayHelper.crx" download style="color:rgba(15, 15, 15, 0.767)"> bayhelper.crx</a>.</p> 
+                    </li>
+                    <li class="subtitle is-5" >
+                        <p style="font-weight: bold">2- En la parte superior derecha, haz clic en Más <i class="fas fa-lg fa-ellipsis-v" style="color:black"> </i> > Más herramientas > Extensiones.</p> 
+                        <p>o bien, escribe en la barra de direcciones <span style="color:rgba(15, 15, 15, 0.767)">chrome://extensions/</span></p>
+                    </li>
+                    <li class="subtitle is-5" >
+                            <p style="font-weight: bold">3- Habilita el  <span style="color:rgba(15, 15, 15, 0.767)">Modo Desarrollador</span>, haciendo clic en el botón que aparece en la parte superior derecha. <img src="assets/developer_mode_chrome.png" alt="" style="height:2rem"></p> 
+                    </li>
+                    <li class="subtitle is-5" >
+                            <p style="font-weight: bold">4- Arrastra el archivo <span style="color:rgba(15, 15, 15, 0.767)">bayhelper.crx</span> al navegador.</p> 
+                    </li>
+                    <li class="subtitle is-5" >
+                            <p style="font-weight: bold">5- Haz clic en el botón <span style="color:rgba(15, 15, 15, 0.767)">Agregar extensión</span>.</p> 
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </section>
+
+    <!-- Instalación Opera -->
+    <section  id="opera" class="hero is-alert">
+            <div class="hero-body">
+                <div class="container has-text-centered">
+                <span> <img src="assets/browsers/opera.png" style="height:3rem;width:3rem;" alt=""></span>
+                <h1 class="title">
+                    Opera
+                </h1>
+                </div>
+                <div class="container">
+                    <ul>
+                        <li class="subtitle is-5" >
+                            <p style="font-weight: bold">1-Descargar el archivo <a href="release/bayHelper.nex" download style="color:rgba(209, 28, 28, 0.767)"> bayhelper.nex</a>.</p> 
+                        </li>
+                        <li class="subtitle is-5" >
+                            <p style="font-weight: bold">2- En el mensaje que aparece en la parte superior, haz clic en el botón <span style="color:rgba(209, 28, 28, 0.767)">Ir a Extensiones</span>. <img src="assets/ir_a_extensiones_opera.png" alt="" style="height:1.5rem"> </p> 
+                            <p>o bien, escribe en la barra de direcciones <span style="color:rgba(209, 28, 28, 0.767)">opera://extensions/</span></p>
+                        </li>
+                        <li class="subtitle is-5" >
+                                <p style="font-weight: bold">3- Habilita el  <span style="color:rgba(209, 28, 28, 0.767)">Modo Desarrollador</span>, haciendo clic en el botón que aparece en la parte superior derecha. <img src="assets/developer_mode_opera.png" alt="" style="height:2rem"></p> 
+                        </li>
+                        <li class="subtitle is-5" >
+                                <p style="font-weight: bold">4- Haz clic en el botón <span style="color:rgba(209, 28, 28, 0.767)">Instalar</span> luego en el botón <span style="color:rgba(209, 28, 28, 0.767)">Si, Instalar</span>.</p> 
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    </section>
+    <!-- Instalación Brave -->
+    <section id="brave" class="hero is-warning">
+            <div class="hero-body">
+                <div class="container has-text-centered">
+                <span> <img src="assets/browsers/brave.png" style="height:3rem;width:3rem;" alt=""></span>
+                <h1 class="title">
+                    Brave
+                </h1>
+                </div>
+                <div class="container">
+                    <ul>
+                        <li class="subtitle is-5" >
+                            <p style="font-weight: bold">1-Descargar el archivo <a href="release/bayHelper.crx" download style="color:rgba(15, 15, 15, 0.767)"> bayhelper.crx</a>.</p> 
+                        </li>
+                        <li class="subtitle is-5" >
+                            <p style="font-weight: bold">2- En la parte superior derecha, haz clic en Más <i class="fas fa-lg fa-bars" style="color:black"> </i> > Más herramientas > Extensiones.</p> 
+                            <p>o bien, escribe en la barra de direcciones <span style="color:rgba(15, 15, 15, 0.767)">brave://extensions/</span></p>
+                        </li>
+                        <li class="subtitle is-5" >
+                                <p style="font-weight: bold">3- Habilita el  <span style="color:rgba(15, 15, 15, 0.767)">Modo Desarrollador</span>, haciendo clic en el botón que aparece en la parte superior derecha. <img src="assets/developer_mode_chrome.png" alt="" style="height:2rem"></p> 
+                        </li>
+                        <li class="subtitle is-5" >
+                                <p style="font-weight: bold">4- Arrastra el archivo <span style="color:rgba(15, 15, 15, 0.767)">bayhelper.crx</span> al navegador.</p> 
+                        </li>
+                        <li class="subtitle is-5" >
+                                <p style="font-weight: bold">5- Haz clic en el botón <span style="color:rgba(15, 15, 15, 0.767)">Agregar extensión</span>.</p> 
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+          <section id="support" class="hero is-info is-bold">
+                <div class="hero-body">
+                    <div class="columns">
+                        <div class="column is-two-thirds">
+                        <div class="container">
+                                <h1 class="title">
+                                    ¿Quieres ayudar a mantener la Extensión?
+                                </h1>
+                                <h2 class="subtitle">
+                                    Con tu aporte me ayudarás a mantenerla actualizada y agregarle mejoras
+                                </h2>
+                                <h3 class="title is-5" style="padding-top:1rem">
+                                    Enviame una donación a mi cuenta: <span class="title is-4" style="color:rgba(15, 15, 15, 0.767)">sarturodev@gmail.com</span>
+                                </h3>
+                                <div class="level">
+                                    <div class="level-left">
+                                            <p class="level-item has-text-centered">
+                                                    <a class="link is-info"> <a href="https://www.skrill.com"><img src="assets/skrill.png"alt=""></a></a>
+                                            </p>
+                                            <p class="level-item has-text-centered" >
+                                                    <a href="https://www.paypal.com" class="link is-info"><img src="assets/paypal.png" alt="" style="height:4rem;width:10rem"></a>
+                                            </p>
+                                    </div>
+
+                                </div>
+                                <h2 class="subtitle">
+                                    Posibles mejoras para la <span style="color:black"> Versión 2.0</span>  
+                                </h2>
+                                <ul>
+                                    <li><span class="icon is-medium"><i class="fas fa-lg fa-wrench"></i></span>Reproducción automática de los videos.</li>
+                                    <li><span class="icon is-medium"><i class="fas fa-lg fa-screwdriver"></i></span>Notificaciones sobre el progreso de los retos diarios/entradas acumuladas.</li>
+                                    <li><span class="icon is-medium"><i class="fas fa-lg fa-gavel"></i></span>Compatiblidad e integración con las páginas snuckls.com y flamzy.com.</li>
+                                    <li>¿Tienes más ideas?, ¿conseguiste algún bug en la versión actual? contáctame</li>
+                                    </ul>
+                                </div>
+                        </div>
+                        <div class="column">
+                                <img src="assets/sarturbot.png" alt="">
+                        </div>
+                    </div>
+
+                </div>
+        </section>
+        <section id="contact" class="hero is-light">
+                <div class="hero-body">
+                  <div class="container">
+                    <h1 class="title">
+                      Contáctame
+                    </h1>
+                    <ul>
+                        <li><span class="icon is-medium	"><i class="fas fa-lg fa-envelope"></i></span><span class="subtitle is-4" style="color:rgb(26, 132, 252)">sarturodev@gmail.com</span> </li>
+                    </ul>
+                    <h2 class="subtitle">
+                      
+                    </h2>
+                    <ul>
+                        <li><span class="icon is-medium	"><i class="fas fa-puzzle-piece"></i></span><span class="subtitle is-5">Extensiones personalizadas</span></li>
+                        <li><span class="icon is-medium	"><i class="fas fa-code"></i></span><span class="subtitle is-5">Paginas Web</span></li>
+                        <li><span class="icon is-medium	"><i class="fas fa-paint-brush"></i></span><span class="subtitle is-5">Logotipos</span></li>
+                    </ul>
+                  </div>
+                </div>
+        </section>
+        <footer class="footer">
+                <div class="content has-text-centered">
+                  <p>
+                    <strong>BayHelper </strong>By Sarturo Developer 2019.</p>
+                    <p>Web Site made with <strong>Bulma CSS</strong></p>
+                </div>
+        </footer>
+  </body>
+</html>
