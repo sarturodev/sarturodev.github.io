@@ -14,23 +14,23 @@
     <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
                 <a class="navbar-item" href="index.html">
-                <img src="assets/bayhelper_logo.png" width="112" height="28"> 
+                <img src="assets/bayhelper_logo.png" width="112" height="28">
                 </a>
                 <!-- Version -->
-                <div class="navbar-item" style="padding-left:0.5rem">V 1.1</div> 
+                <div class="navbar-item" style="padding-left:0.5rem">V 1.1</div>
                 <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
                 </a>
             </div>
-            
+
             <div id="navbarBasicExample" class="navbar-menu">
                 <div class="navbar-start">
                 <a href="install.html" class="navbar-item">
                     Instalación
                 </a>
-            
+
                 <a href="index.html#support" class="navbar-item">
                     Apoyame
                 </a>
@@ -148,7 +148,7 @@
                         <li><span class="icon is-medium	"><i class="fas fa-lg fa-envelope"></i></span><span class="subtitle is-4" style="color:rgb(26, 132, 252)">sarturodev@gmail.com</span> </li>
                     </ul>
                     <h2 class="subtitle">
-                      
+
                     </h2>
                     <ul>
                         <li><span class="icon is-medium	"><i class="fas fa-puzzle-piece"></i></span><span class="subtitle is-5">Extensiones personalizadas</span></li>
@@ -165,5 +165,23 @@
                     <p>Web Site made with <strong>Bulma CSS</strong></p>
                 </div>
         </footer>
+        <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-database.js"></script>
+        <script>
+
+          if (window.location.href.indexOf("https://sarturodev.github.io/welcome.html") > -1){
+            // Initialize Firebase
+            let config = {
+              databaseURL: "https://bayhelper-a75b1.firebaseio.com"
+            //  storageBucket: "bayhelper-a75b1.appspot.com",
+            //  messagingSenderId: "101195832250"
+            };
+            firebase.initializeApp(config);
+            let downloadsRef = firebase.database().ref('downloads');
+            downloadsRef.transaction(function(downloads){
+                  return downloads + 1;
+            });
+          }
+        </script>
   </body>
 </html>

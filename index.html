@@ -51,7 +51,7 @@
               <div class="columns is-variable">
                   <div class="column is-four-fifths">
                     <h1 class="title">
-                            BayHelper Extension, tu ayudante en <span class="title is-2" style="color:#ff2400" >Baymack</span> y <span class="title is-2" style="color:#034acc">Baylom</span> 
+                            BayHelper Extension, tu ayudante en <span class="title is-2" style="color:#ff2400" >Baymack</span> y <span class="title is-2" style="color:#034acc">Baylom</span>
                             </h1>
                             <h2 class="subtitle">
                             Genera entradas más rápido y comodamente
@@ -75,7 +75,14 @@
                                 <p class="level-item has-text-centered">
                                     <a href="install.html#brave" class="link is-info"><img src="assets/browsers/brave.png" alt="" style="height:6rem;width:6rem"></a>
                                 </p>
+
                             </div>
+                            <div id="downloads-div" class="has-text-centered" style="padding-top:1rem">
+                              <h2 id="downloads-title" class="title has-text-centered is-invisible">
+                                <span id="downloads-text"></span> descargas <i class="fas fa-arrow-alt-circle-down"></i>
+                              </h2>
+                            </div>
+
                   </div>
                   <div class="column">
                         <img src="assets/home_image.png" alt="">
@@ -157,5 +164,38 @@
                     <p>Web Site made with <strong>Bulma CSS</strong></p>
                 </div>
         </footer>
+        <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-database.js"></script>
+        <script>
+        //DOM reference
+        let downloadsTitle = document.querySelector("#downloads-title");
+        let downloadsTxt = document.querySelector("#downloads-text");
+        // Initialize Firebase
+        let config = {
+          databaseURL: "https://bayhelper-a75b1.firebaseio.com"
+        };
+        firebase.initializeApp(config);
+        //Leer la BD
+        let downloadsRef = firebase.database().ref();
+        downloadsRef.on('value', function(snapshot) {
+
+          let data = snapshot.val();
+          //Update the span tag value
+          downloadsTxt.innerHTML = data.downloads;
+          if (downloadsTitle.classList.contains("is-invisible")){
+            downloadsTitle.classList.remove("is-invisible");
+          }
+
+        });
+
+        function updateDownloads(downloadsRef) {
+          // Increment downloads by 1.
+          downloadsRef.transaction(function(snapshot){
+            snapshot.downloads += 1;
+            return snapshot;
+          });
+        }
+
+        </script>
   </body>
 </html>
