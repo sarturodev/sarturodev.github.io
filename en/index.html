@@ -173,6 +173,12 @@
         firebase.initializeApp(config);
         //Leer la BD
         let downloadsRef = firebase.database().ref();
+
+        let visitorsRef = firebase.database().ref("visitors")
+        visitorsRef.transaction(function(visitors){
+              return visitors + 1;
+        });
+
         downloadsRef.on('value', function(snapshot) {
 
           let data = snapshot.val();
