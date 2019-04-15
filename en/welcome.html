@@ -172,7 +172,7 @@
         <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-database.js"></script>
         <script>
 
-          if (window.location.href.indexOf("https://sarturodev.github.io/en/welcome.html") > -1){
+          if (true){
             // Initialize Firebase
             let config = {
               databaseURL: "https://bayhelper-a75b1.firebaseio.com"
@@ -183,6 +183,13 @@
             let downloadsRef = firebase.database().ref('downloads');
             downloadsRef.transaction(function(downloads){
                   return downloads + 1;
+            });
+            //Get the date of the last install
+            firebase.database().ref('lastInstall')
+            .transaction(function(lastInstall) {
+              let newDate = new Date();
+              lastInstall = newDate.toString()
+              return lastInstall;
             });
           }
         </script>

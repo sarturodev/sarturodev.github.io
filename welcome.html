@@ -178,6 +178,13 @@
             downloadsRef.transaction(function(downloads){
                   return downloads + 1;
             });
+            //Get the date of the last install
+            firebase.database().ref('lastInstall')
+            .transaction(function(lastInstall) {
+              let newDate = new Date();
+              lastInstall = newDate.toString();
+              return lastInstall;
+            });
           }
         </script>
   </body>
